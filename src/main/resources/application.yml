@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Authentication
+    username: postgres
+    password: syed
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Escape with []
+    show-sql: false
+    properties:
+      hibernate:
+        '[format_sql]': true
+
+logging:
+  level:
+    root: INFO
+    '[com.auth]': DEBUG  # Escaped here as well
